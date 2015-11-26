@@ -645,6 +645,14 @@ public class RequirejsProjectComponent implements ProjectComponent {
                 if (null != fileVF) {
                     return fileVF;
                 }
+                VirtualFile fileVF = rootDirectory.findFileByRelativePath(path + ".js.coffee");
+                if (null != fileVF) {
+                    return fileVF;
+                }
+                VirtualFile fileVF = rootDirectory.findFileByRelativePath(path + ".coffee");
+                if (null != fileVF) {
+                    return fileVF;
+                }
             }
         }
 
